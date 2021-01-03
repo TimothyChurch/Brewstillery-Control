@@ -1,0 +1,26 @@
+interface RetryItem {
+    lines: string[];
+    retryCount: number;
+    next?: RetryItem;
+}
+/**
+ * Retries lines up to a limit of max buffer size.
+ */
+export default class RetryBuffer {
+    private maxLines;
+    private retryLines;
+    first?: RetryItem;
+    last?: RetryItem;
+    size: number;
+    nextRetryTime: number;
+    closed: boolean;
+    private _timeoutHandle;
+    constructor(maxLines: number, retryLines: (lines: string[], retryCountdown: number) => Promise<void>);
+    addLines(lines: string[], retryCount: number, delay: number): void;
+    removeLines(): RetryItem | undefined;
+    scheduleRetry(delay: number): void;
+    flush(): Promise<void>;
+    close(): number;
+}
+export {};
+//# sourceMappingURL=RetryBuffer.d.ts.map

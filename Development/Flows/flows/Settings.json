@@ -1,0 +1,538 @@
+[
+  {
+    "id": "4ef08725.8fbdd",
+    "type": "tab",
+    "label": "Settings",
+    "disabled": false,
+    "info": "This flow displays output from the PID \nalgorithm. This can be useful for tuning \npurposes."
+  },
+  {
+    "id": "e82101b5.32efb8",
+    "type": "ui_text",
+    "z": "4ef08725.8fbdd",
+    "group": "3664e4b.5830a9c",
+    "order": 5,
+    "width": 2,
+    "height": 1,
+    "name": "Inner PID Integrator",
+    "label": "Integral",
+    "format": "{{inner_integrator | number:1}}°C⦁s",
+    "layout": "col-center",
+    "x": 550,
+    "y": 300,
+    "wires": []
+  },
+  {
+    "id": "527896c3.acf218",
+    "type": "ui_text",
+    "z": "4ef08725.8fbdd",
+    "group": "3664e4b.5830a9c",
+    "order": 3,
+    "width": 2,
+    "height": 1,
+    "name": "Inner PID Error",
+    "label": "Error",
+    "format": "{{last_inner_error | number:1}}°C",
+    "layout": "col-center",
+    "x": 540,
+    "y": 260,
+    "wires": []
+  },
+  {
+    "id": "fba1b06.ac1075",
+    "type": "ui_text",
+    "z": "4ef08725.8fbdd",
+    "group": "3664e4b.5830a9c",
+    "order": 7,
+    "width": 2,
+    "height": 1,
+    "name": "Inner PID Derivative",
+    "label": "Derivative",
+    "format": "{{inner_derivative | number:1}}°C/s",
+    "layout": "col-center",
+    "x": 550,
+    "y": 340,
+    "wires": []
+  },
+  {
+    "id": "3f2878d3.94f4e",
+    "type": "link in",
+    "z": "4ef08725.8fbdd",
+    "name": "Cascade PID display",
+    "links": [
+      "3c1c43fe.a90e0c"
+    ],
+    "x": 355,
+    "y": 360,
+    "wires": [
+      [
+        "e82101b5.32efb8",
+        "fba1b06.ac1075",
+        "527896c3.acf218",
+        "2aae55db.648c0a",
+        "b4a403cc.f45e58",
+        "b627264.9440ad8",
+        "b8578d41.4523a",
+        "204b1bc3.f8ebdc",
+        "ea10db28.55266"
+      ]
+    ]
+  },
+  {
+    "id": "331f0c30.0eaf84",
+    "type": "ui_text",
+    "z": "4ef08725.8fbdd",
+    "group": "f04603e8.50a4f",
+    "order": 2,
+    "width": 2,
+    "height": 1,
+    "name": "PID Integrator",
+    "label": "Integral",
+    "format": "{{integrator | number:1}}°C⦁s",
+    "layout": "col-center",
+    "x": 540,
+    "y": 740,
+    "wires": []
+  },
+  {
+    "id": "6d1b4227.4e146c",
+    "type": "ui_text",
+    "z": "4ef08725.8fbdd",
+    "group": "f04603e8.50a4f",
+    "order": 1,
+    "width": 2,
+    "height": 1,
+    "name": "PID Error",
+    "label": "Error",
+    "format": "{{last_error | number:1}}°C",
+    "layout": "col-center",
+    "x": 520,
+    "y": 700,
+    "wires": []
+  },
+  {
+    "id": "834663e4.c08d7",
+    "type": "ui_text",
+    "z": "4ef08725.8fbdd",
+    "group": "f04603e8.50a4f",
+    "order": 3,
+    "width": 2,
+    "height": 1,
+    "name": "PID Derivative",
+    "label": "Derivative",
+    "format": "{{derivative | number:1}}°C/s",
+    "layout": "col-center",
+    "x": 540,
+    "y": 780,
+    "wires": []
+  },
+  {
+    "id": "48ae8805.06b6a",
+    "type": "link in",
+    "z": "4ef08725.8fbdd",
+    "name": "Boil PID display",
+    "links": [
+      "be75bc65.2c4a58",
+      "fd3d823.f4d7d8"
+    ],
+    "x": 355,
+    "y": 740,
+    "wires": [
+      [
+        "331f0c30.0eaf84",
+        "834663e4.c08d7",
+        "6d1b4227.4e146c"
+      ]
+    ]
+  },
+  {
+    "id": "b4a403cc.f45e58",
+    "type": "ui_text",
+    "z": "4ef08725.8fbdd",
+    "group": "321aaa6a.377d5e",
+    "order": 5,
+    "width": 2,
+    "height": 1,
+    "name": "Outer PID Integrator",
+    "label": "Integral",
+    "format": "{{outer_integrator | number:1}}°C⦁s",
+    "layout": "col-center",
+    "x": 560,
+    "y": 420,
+    "wires": []
+  },
+  {
+    "id": "2aae55db.648c0a",
+    "type": "ui_text",
+    "z": "4ef08725.8fbdd",
+    "group": "321aaa6a.377d5e",
+    "order": 3,
+    "width": 2,
+    "height": 1,
+    "name": "Outer PID Error",
+    "label": "Error",
+    "format": "{{last_outer_error | number:1}}°C",
+    "layout": "col-center",
+    "x": 540,
+    "y": 380,
+    "wires": []
+  },
+  {
+    "id": "b627264.9440ad8",
+    "type": "ui_text",
+    "z": "4ef08725.8fbdd",
+    "group": "321aaa6a.377d5e",
+    "order": 7,
+    "width": 2,
+    "height": 1,
+    "name": "Outer PID Derivative",
+    "label": "Derivative",
+    "format": "{{outer_derivative | number:1}}°C/s",
+    "layout": "col-center",
+    "x": 560,
+    "y": 460,
+    "wires": []
+  },
+  {
+    "id": "b8578d41.4523a",
+    "type": "ui_text",
+    "z": "4ef08725.8fbdd",
+    "group": "3664e4b.5830a9c",
+    "order": 1,
+    "width": 2,
+    "height": 1,
+    "name": "Inner Target",
+    "label": "Target",
+    "format": "{{inner_target | number:1}}°C",
+    "layout": "col-center",
+    "x": 530,
+    "y": 500,
+    "wires": []
+  },
+  {
+    "id": "204b1bc3.f8ebdc",
+    "type": "ui_text",
+    "z": "4ef08725.8fbdd",
+    "group": "321aaa6a.377d5e",
+    "order": 1,
+    "width": 2,
+    "height": 1,
+    "name": "Outer Output",
+    "label": "Output",
+    "format": "{{outer_output | number:1}}°C",
+    "layout": "col-center",
+    "x": 530,
+    "y": 580,
+    "wires": []
+  },
+  {
+    "id": "ea10db28.55266",
+    "type": "ui_text",
+    "z": "4ef08725.8fbdd",
+    "group": "3664e4b.5830a9c",
+    "order": 15,
+    "width": 3,
+    "height": 1,
+    "name": "Inner Target",
+    "label": "Target",
+    "format": "{{inner_target | number:1}}°C",
+    "layout": "col-center",
+    "x": 530,
+    "y": 540,
+    "wires": []
+  },
+  {
+    "id": "6188a3dc.9d0a9c",
+    "type": "switch",
+    "z": "4ef08725.8fbdd",
+    "name": "",
+    "property": "rims_on",
+    "propertyType": "global",
+    "rules": [
+      {
+        "t": "false"
+      }
+    ],
+    "checkall": "true",
+    "repair": true,
+    "outputs": 1,
+    "x": 210,
+    "y": 480,
+    "wires": [
+      [
+        "417ad43f.c5b28c"
+      ]
+    ]
+  },
+  {
+    "id": "6ce6448.f7e59bc",
+    "type": "link in",
+    "z": "4ef08725.8fbdd",
+    "name": "",
+    "links": [
+      "64f4ecd7.223dac",
+      "3e259a61.256ff6"
+    ],
+    "x": 115,
+    "y": 480,
+    "wires": [
+      [
+        "6188a3dc.9d0a9c"
+      ]
+    ]
+  },
+  {
+    "id": "417ad43f.c5b28c",
+    "type": "change",
+    "z": "4ef08725.8fbdd",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "inner_target",
+        "pt": "msg",
+        "to": "payload",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 280,
+    "y": 520,
+    "wires": [
+      [
+        "ea10db28.55266",
+        "b8578d41.4523a"
+      ]
+    ]
+  },
+  {
+    "id": "36ce38c8.0568d8",
+    "type": "inject",
+    "z": "4ef08725.8fbdd",
+    "name": "Initial Pre-heat",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": true,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "preheat",
+    "payloadType": "global",
+    "x": 140,
+    "y": 80,
+    "wires": [
+      [
+        "3c49eb57.93ed64"
+      ]
+    ]
+  },
+  {
+    "id": "1e3d325a.b26bde",
+    "type": "ui_numeric",
+    "z": "4ef08725.8fbdd",
+    "name": "",
+    "label": "Pre-heat Tempature C",
+    "tooltip": "",
+    "group": "50b35c82.f9a6f4",
+    "order": 1,
+    "width": 0,
+    "height": 0,
+    "wrap": false,
+    "passthru": true,
+    "topic": "",
+    "format": "{{value}}",
+    "min": 0,
+    "max": "75",
+    "step": 1,
+    "x": 130,
+    "y": 120,
+    "wires": [
+      [
+        "3c49eb57.93ed64"
+      ]
+    ]
+  },
+  {
+    "id": "3c49eb57.93ed64",
+    "type": "change",
+    "z": "4ef08725.8fbdd",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "preheat",
+        "pt": "global",
+        "to": "payload",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 370,
+    "y": 100,
+    "wires": [
+      [
+        "b71975d.3550388"
+      ]
+    ]
+  },
+  {
+    "id": "b71975d.3550388",
+    "type": "link out",
+    "z": "4ef08725.8fbdd",
+    "name": "Target temp",
+    "links": [
+      "cb6fff6f.eb696"
+    ],
+    "x": 495,
+    "y": 100,
+    "wires": []
+  },
+  {
+    "id": "241fde88.5d9662",
+    "type": "inject",
+    "z": "4ef08725.8fbdd",
+    "name": "Initial Depleg Delta",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": true,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "0.5",
+    "payloadType": "num",
+    "x": 700,
+    "y": 80,
+    "wires": [
+      [
+        "12916d6c.162033"
+      ]
+    ]
+  },
+  {
+    "id": "12916d6c.162033",
+    "type": "change",
+    "z": "4ef08725.8fbdd",
+    "name": "set global.dephleg.delta",
+    "rules": [
+      {
+        "t": "set",
+        "p": "dephleg.delta",
+        "pt": "global",
+        "to": "payload",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 970,
+    "y": 100,
+    "wires": [
+      [
+        "ca92425d.77b8"
+      ]
+    ]
+  },
+  {
+    "id": "4ebc903b.7570c",
+    "type": "ui_numeric",
+    "z": "4ef08725.8fbdd",
+    "name": "",
+    "label": "Depleg Delta",
+    "tooltip": "",
+    "group": "50b35c82.f9a6f4",
+    "order": 2,
+    "width": 0,
+    "height": 0,
+    "wrap": false,
+    "passthru": true,
+    "topic": "",
+    "format": "{{value}}",
+    "min": 0,
+    "max": 10,
+    "step": ".1",
+    "x": 710,
+    "y": 120,
+    "wires": [
+      [
+        "12916d6c.162033"
+      ]
+    ]
+  },
+  {
+    "id": "ca92425d.77b8",
+    "type": "link out",
+    "z": "4ef08725.8fbdd",
+    "name": "Dephleg Delta",
+    "links": [
+      "9c094d41.16fba"
+    ],
+    "x": 1115,
+    "y": 100,
+    "wires": []
+  },
+  {
+    "id": "a50f903b.e0fe",
+    "type": "ui_button",
+    "z": "4ef08725.8fbdd",
+    "name": "",
+    "group": "50b35c82.f9a6f4",
+    "order": 2,
+    "width": 0,
+    "height": 0,
+    "passthru": false,
+    "label": "Dashboard",
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "icon": "",
+    "payload": "Distilling",
+    "payloadType": "str",
+    "topic": "",
+    "x": 200,
+    "y": 200,
+    "wires": [
+      [
+        "3274a395.80ef6c"
+      ]
+    ]
+  },
+  {
+    "id": "3274a395.80ef6c",
+    "type": "ui_ui_control",
+    "z": "4ef08725.8fbdd",
+    "name": "",
+    "events": "all",
+    "x": 380,
+    "y": 200,
+    "wires": [
+      []
+    ]
+  }
+]

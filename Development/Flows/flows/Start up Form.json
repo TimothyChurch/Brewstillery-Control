@@ -1,0 +1,565 @@
+[
+  {
+    "id": "7c1b1ea9.f4fd7",
+    "type": "tab",
+    "label": "Start up Form",
+    "disabled": false,
+    "info": ""
+  },
+  {
+    "id": "60e75bea.b09b94",
+    "type": "group",
+    "z": "7c1b1ea9.f4fd7",
+    "name": "Batch Information",
+    "style": {
+      "label": true
+    },
+    "nodes": [
+      "25909bc2.e78714",
+      "f6f664e4.df1288",
+      "1dff7527.0c8b5b",
+      "a3cb27e1.b242f8",
+      "bad72e17.bdeee",
+      "5cd8ce31.b774f",
+      "41aae92d.ec9df8",
+      "6ce11651.012638",
+      "5388cc52.d414c4",
+      "d0a3f9df.c3d4f8",
+      "d4cf72af.f33d9",
+      "61567072.6807f"
+    ],
+    "x": 234,
+    "y": 39,
+    "w": 532,
+    "h": 282
+  },
+  {
+    "id": "61567072.6807f",
+    "type": "change",
+    "z": "7c1b1ea9.f4fd7",
+    "g": "60e75bea.b09b94",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "batch.misc.volume",
+        "pt": "global",
+        "to": "payload",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 600,
+    "y": 280,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "d4cf72af.f33d9",
+    "type": "change",
+    "z": "7c1b1ea9.f4fd7",
+    "g": "60e75bea.b09b94",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "batch.fients.abv",
+        "pt": "global",
+        "to": "payload",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 590,
+    "y": 240,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "d0a3f9df.c3d4f8",
+    "type": "change",
+    "z": "7c1b1ea9.f4fd7",
+    "g": "60e75bea.b09b94",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "batch.fients.volume",
+        "pt": "global",
+        "to": "payload",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 610,
+    "y": 200,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "5388cc52.d414c4",
+    "type": "change",
+    "z": "7c1b1ea9.f4fd7",
+    "g": "60e75bea.b09b94",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "batch.charge.abv",
+        "pt": "global",
+        "to": "payload",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 600,
+    "y": 160,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "6ce11651.012638",
+    "type": "change",
+    "z": "7c1b1ea9.f4fd7",
+    "g": "60e75bea.b09b94",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "batch.charge.volume",
+        "pt": "global",
+        "to": "payload",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 610,
+    "y": 120,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "41aae92d.ec9df8",
+    "type": "change",
+    "z": "7c1b1ea9.f4fd7",
+    "g": "60e75bea.b09b94",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "batch.name",
+        "pt": "global",
+        "to": "payload",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 580,
+    "y": 80,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "5cd8ce31.b774f",
+    "type": "ui_text_input",
+    "z": "7c1b1ea9.f4fd7",
+    "g": "60e75bea.b09b94",
+    "name": "",
+    "label": "Water/Misc Volume",
+    "tooltip": "",
+    "group": "9f19d793.eac5f8",
+    "order": 6,
+    "width": 0,
+    "height": 0,
+    "passthru": true,
+    "mode": "number",
+    "delay": 300,
+    "topic": "",
+    "x": 350,
+    "y": 280,
+    "wires": [
+      [
+        "61567072.6807f"
+      ]
+    ]
+  },
+  {
+    "id": "bad72e17.bdeee",
+    "type": "ui_text_input",
+    "z": "7c1b1ea9.f4fd7",
+    "g": "60e75bea.b09b94",
+    "name": "",
+    "label": "Fients ABV",
+    "tooltip": "",
+    "group": "9f19d793.eac5f8",
+    "order": 5,
+    "width": 0,
+    "height": 0,
+    "passthru": true,
+    "mode": "number",
+    "delay": 300,
+    "topic": "",
+    "x": 330,
+    "y": 240,
+    "wires": [
+      [
+        "d4cf72af.f33d9"
+      ]
+    ]
+  },
+  {
+    "id": "a3cb27e1.b242f8",
+    "type": "ui_text_input",
+    "z": "7c1b1ea9.f4fd7",
+    "g": "60e75bea.b09b94",
+    "name": "",
+    "label": "Fients Volume",
+    "tooltip": "",
+    "group": "9f19d793.eac5f8",
+    "order": 4,
+    "width": 0,
+    "height": 0,
+    "passthru": true,
+    "mode": "number",
+    "delay": 300,
+    "topic": "",
+    "x": 340,
+    "y": 200,
+    "wires": [
+      [
+        "d0a3f9df.c3d4f8"
+      ]
+    ]
+  },
+  {
+    "id": "1dff7527.0c8b5b",
+    "type": "ui_text_input",
+    "z": "7c1b1ea9.f4fd7",
+    "g": "60e75bea.b09b94",
+    "name": "",
+    "label": "Charge ABV",
+    "tooltip": "",
+    "group": "9f19d793.eac5f8",
+    "order": 3,
+    "width": 0,
+    "height": 0,
+    "passthru": true,
+    "mode": "number",
+    "delay": 300,
+    "topic": "",
+    "x": 330,
+    "y": 160,
+    "wires": [
+      [
+        "5388cc52.d414c4"
+      ]
+    ]
+  },
+  {
+    "id": "f6f664e4.df1288",
+    "type": "ui_text_input",
+    "z": "7c1b1ea9.f4fd7",
+    "g": "60e75bea.b09b94",
+    "name": "",
+    "label": "Charge Volume",
+    "tooltip": "",
+    "group": "9f19d793.eac5f8",
+    "order": 2,
+    "width": 0,
+    "height": 0,
+    "passthru": true,
+    "mode": "number",
+    "delay": 300,
+    "topic": "",
+    "x": 340,
+    "y": 120,
+    "wires": [
+      [
+        "6ce11651.012638"
+      ]
+    ]
+  },
+  {
+    "id": "25909bc2.e78714",
+    "type": "ui_text_input",
+    "z": "7c1b1ea9.f4fd7",
+    "g": "60e75bea.b09b94",
+    "name": "",
+    "label": "Batch Name",
+    "tooltip": "",
+    "group": "9f19d793.eac5f8",
+    "order": 1,
+    "width": 0,
+    "height": 0,
+    "passthru": true,
+    "mode": "text",
+    "delay": 300,
+    "topic": "",
+    "x": 330,
+    "y": 80,
+    "wires": [
+      [
+        "41aae92d.ec9df8"
+      ]
+    ]
+  },
+  {
+    "id": "6975a962.315e98",
+    "type": "ui_ui_control",
+    "z": "7c1b1ea9.f4fd7",
+    "name": "",
+    "events": "connect",
+    "x": 800,
+    "y": 840,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "468f9d92.0d38f4",
+    "type": "link out",
+    "z": "7c1b1ea9.f4fd7",
+    "name": "Start System",
+    "links": [
+      "a100618c.b2f92",
+      "fcbab852.0d32c8",
+      "4ca10801.bf1988"
+    ],
+    "x": 755,
+    "y": 880,
+    "wires": []
+  },
+  {
+    "id": "fc34292a.115af8",
+    "type": "ui_dropdown",
+    "z": "7c1b1ea9.f4fd7",
+    "name": "",
+    "label": "Sensor Selection",
+    "tooltip": "",
+    "place": "Select option",
+    "group": "40070099.65227",
+    "order": 2,
+    "width": 4,
+    "height": 1,
+    "passthru": true,
+    "multiple": false,
+    "options": [
+      {
+        "label": "ds18b20",
+        "value": "ds18b20",
+        "type": "str"
+      },
+      {
+        "label": "RTD",
+        "value": "RTD",
+        "type": "str"
+      }
+    ],
+    "payload": "",
+    "topic": "",
+    "x": 350,
+    "y": 460,
+    "wires": [
+      [
+        "2ac72ef5.a4e792"
+      ]
+    ]
+  },
+  {
+    "id": "2ac72ef5.a4e792",
+    "type": "change",
+    "z": "7c1b1ea9.f4fd7",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "batch.sensor",
+        "pt": "global",
+        "to": "payload",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 600,
+    "y": 460,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "db001647.ad0c58",
+    "type": "ui_button",
+    "z": "7c1b1ea9.f4fd7",
+    "name": "",
+    "group": "40070099.65227",
+    "order": 1,
+    "width": 4,
+    "height": 1,
+    "passthru": false,
+    "label": "Let's get started!",
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "icon": "",
+    "payload": "Distilling",
+    "payloadType": "str",
+    "topic": "",
+    "x": 400,
+    "y": 860,
+    "wires": [
+      [
+        "ae8780d5.f1bcd"
+      ]
+    ]
+  },
+  {
+    "id": "54fc5e6c.a1a5e",
+    "type": "ui_switch",
+    "z": "7c1b1ea9.f4fd7",
+    "name": "",
+    "label": "Jacketed",
+    "tooltip": "",
+    "group": "40070099.65227",
+    "order": 3,
+    "width": 4,
+    "height": 1,
+    "passthru": true,
+    "decouple": "false",
+    "topic": "",
+    "style": "",
+    "onvalue": "true",
+    "onvalueType": "bool",
+    "onicon": "",
+    "oncolor": "",
+    "offvalue": "false",
+    "offvalueType": "bool",
+    "officon": "",
+    "offcolor": "",
+    "x": 320,
+    "y": 420,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "ae8780d5.f1bcd",
+    "type": "change",
+    "z": "7c1b1ea9.f4fd7",
+    "name": "",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload",
+        "pt": "msg",
+        "to": "Distilling",
+        "tot": "str"
+      },
+      {
+        "t": "set",
+        "p": "complete",
+        "pt": "msg",
+        "to": "true",
+        "tot": "bool"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 620,
+    "y": 860,
+    "wires": [
+      [
+        "6975a962.315e98",
+        "468f9d92.0d38f4"
+      ]
+    ]
+  },
+  {
+    "id": "94c18fec.f4305",
+    "type": "debug",
+    "z": "7c1b1ea9.f4fd7",
+    "name": "",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 880,
+    "y": 140,
+    "wires": []
+  },
+  {
+    "id": "a7eba453.ba4fb8",
+    "type": "inject",
+    "z": "7c1b1ea9.f4fd7",
+    "name": "Clear selections",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": true,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "str",
+    "x": 120,
+    "y": 360,
+    "wires": [
+      [
+        "25909bc2.e78714",
+        "f6f664e4.df1288",
+        "1dff7527.0c8b5b",
+        "a3cb27e1.b242f8",
+        "bad72e17.bdeee",
+        "5cd8ce31.b774f",
+        "fc34292a.115af8",
+        "54fc5e6c.a1a5e"
+      ]
+    ]
+  }
+]

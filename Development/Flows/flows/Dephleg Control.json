@@ -1,0 +1,320 @@
+[
+  {
+    "id": "aa302b94.cd9608",
+    "type": "tab",
+    "label": "Dephleg Control",
+    "disabled": false,
+    "info": ""
+  },
+  {
+    "id": "66d5f7bc.90e308",
+    "type": "link in",
+    "z": "aa302b94.cd9608",
+    "name": "Dephleg Temp",
+    "links": [
+      "399458e1.0033c8"
+    ],
+    "x": 275,
+    "y": 160,
+    "wires": [
+      [
+        "6f157f99.b19c5"
+      ]
+    ]
+  },
+  {
+    "id": "26dfdbc4.f780a4",
+    "type": "link in",
+    "z": "aa302b94.cd9608",
+    "name": "Dephleg Target",
+    "links": [
+      "837abee6.1043"
+    ],
+    "x": 275,
+    "y": 220,
+    "wires": [
+      [
+        "95e6c143.a15c3"
+      ]
+    ]
+  },
+  {
+    "id": "9c094d41.16fba",
+    "type": "link in",
+    "z": "aa302b94.cd9608",
+    "name": "Max Delta Temp",
+    "links": [
+      "ca92425d.77b8"
+    ],
+    "x": 275,
+    "y": 280,
+    "wires": [
+      [
+        "82515242.f5b0f"
+      ]
+    ]
+  },
+  {
+    "id": "23f05c6f.3214a4",
+    "type": "inject",
+    "z": "aa302b94.cd9608",
+    "name": "Dephleg Target",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": true,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "70",
+    "payloadType": "num",
+    "x": 380,
+    "y": 80,
+    "wires": [
+      [
+        "2e7d40b0.08277"
+      ]
+    ]
+  },
+  {
+    "id": "51ff31e8.7b155",
+    "type": "link out",
+    "z": "aa302b94.cd9608",
+    "name": "Dephleg Target",
+    "links": [
+      "94cf49d2.757938"
+    ],
+    "x": 735,
+    "y": 80,
+    "wires": []
+  },
+  {
+    "id": "2e7d40b0.08277",
+    "type": "change",
+    "z": "aa302b94.cd9608",
+    "name": "set global.dephleg.target",
+    "rules": [
+      {
+        "t": "set",
+        "p": "dephleg.target",
+        "pt": "global",
+        "to": "payload",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 590,
+    "y": 80,
+    "wires": [
+      [
+        "51ff31e8.7b155"
+      ]
+    ]
+  },
+  {
+    "id": "d227e7e1.ea1e78",
+    "type": "rpi-gpio out",
+    "z": "aa302b94.cd9608",
+    "d": true,
+    "name": "Bypass valve (default Closed)",
+    "pin": "",
+    "set": "",
+    "level": "0",
+    "freq": "",
+    "out": "out",
+    "x": 970,
+    "y": 180,
+    "wires": []
+  },
+  {
+    "id": "7e52116d.6bdb9",
+    "type": "rpi-gpio out",
+    "z": "aa302b94.cd9608",
+    "d": true,
+    "name": "Depleg Valve (default open",
+    "pin": "",
+    "set": "",
+    "level": "0",
+    "freq": "",
+    "out": "out",
+    "x": 980,
+    "y": 260,
+    "wires": []
+  },
+  {
+    "id": "6f157f99.b19c5",
+    "type": "change",
+    "z": "aa302b94.cd9608",
+    "name": "Depleg temp",
+    "rules": [
+      {
+        "t": "set",
+        "p": "temp",
+        "pt": "flow",
+        "to": "payload",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 400,
+    "y": 160,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "95e6c143.a15c3",
+    "type": "change",
+    "z": "aa302b94.cd9608",
+    "name": "Depleg target",
+    "rules": [
+      {
+        "t": "set",
+        "p": "target",
+        "pt": "flow",
+        "to": "payload",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 400,
+    "y": 220,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "82515242.f5b0f",
+    "type": "change",
+    "z": "aa302b94.cd9608",
+    "name": "Depleg delta",
+    "rules": [
+      {
+        "t": "set",
+        "p": "delta",
+        "pt": "flow",
+        "to": "payload",
+        "tot": "msg"
+      }
+    ],
+    "action": "",
+    "property": "",
+    "from": "",
+    "to": "",
+    "reg": false,
+    "x": 390,
+    "y": 280,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "11963f23.820e21",
+    "type": "debug",
+    "z": "aa302b94.cd9608",
+    "name": "",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 940,
+    "y": 380,
+    "wires": []
+  },
+  {
+    "id": "23f69b66.0ecf74",
+    "type": "debug",
+    "z": "aa302b94.cd9608",
+    "name": "",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 940,
+    "y": 100,
+    "wires": []
+  },
+  {
+    "id": "867c590d.0752a8",
+    "type": "function",
+    "z": "aa302b94.cd9608",
+    "name": "Basic On-Off",
+    "func": "temp = flow.get(\"temp\");\ntarget = flow.get(\"target\");\ndelta = flow.get(\"delta\");\nvar bypass = {payload: 0}; \nvar deplag = {payload: 0};\n\nif (temp >= (target + delta)) {\n    bypass.payload = 0;\n    deplag.payload = 0;\n} else if (temp >= target) {\n    bypass.payload = 0;\n    deplag.payload = 0;\n} else if (temp < target && temp >= (target - delta)) {\n    bypass.payload = 1;\n    deplag.payload = 0;\n} else {\n    bypass.payload = 1;\n    deplag.payload = 1;\n}\n\nreturn [bypass, deplag];",
+    "outputs": 2,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "x": 650,
+    "y": 220,
+    "wires": [
+      [
+        "d227e7e1.ea1e78",
+        "23f69b66.0ecf74"
+      ],
+      [
+        "7e52116d.6bdb9",
+        "11963f23.820e21"
+      ]
+    ],
+    "outputLabels": [
+      "Bypass",
+      "Dephleg"
+    ]
+  },
+  {
+    "id": "3b7d6616.fb116a",
+    "type": "inject",
+    "z": "aa302b94.cd9608",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "2",
+    "crontab": "",
+    "once": true,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 630,
+    "y": 160,
+    "wires": [
+      [
+        "867c590d.0752a8"
+      ]
+    ]
+  }
+]

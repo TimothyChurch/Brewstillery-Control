@@ -1,0 +1,89 @@
+[
+  {
+    "id": "3781abdd.207e34",
+    "type": "tab",
+    "label": "Element Control",
+    "disabled": false,
+    "info": ""
+  },
+  {
+    "id": "e71264f6.099628",
+    "type": "rpi-gpio out",
+    "z": "3781abdd.207e34",
+    "name": "HLT GPIO",
+    "pin": "36",
+    "set": "",
+    "level": "0",
+    "freq": "1",
+    "out": "pwm",
+    "x": 350,
+    "y": 100,
+    "wires": []
+  },
+  {
+    "id": "3a8dd5f4.265eea",
+    "type": "range",
+    "z": "3781abdd.207e34",
+    "minin": "0",
+    "maxin": "100",
+    "minout": "0",
+    "maxout": "5500",
+    "action": "scale",
+    "round": false,
+    "property": "payload",
+    "name": "Input Power",
+    "x": 350,
+    "y": 140,
+    "wires": [
+      [
+        "8c5eb6a3.f67408"
+      ]
+    ]
+  },
+  {
+    "id": "8c5eb6a3.f67408",
+    "type": "ui_gauge",
+    "z": "3781abdd.207e34",
+    "name": "Input Power Gauge",
+    "group": "f0c68884.7c8b18",
+    "order": 1,
+    "width": 9,
+    "height": 4,
+    "gtype": "gage",
+    "title": "Input Power",
+    "label": "usage",
+    "format": "{{payload | number:1}} W",
+    "min": 0,
+    "max": "5500",
+    "colors": [
+      "#00b500",
+      "#e6e600",
+      "#ca3838"
+    ],
+    "seg1": "",
+    "seg2": "",
+    "x": 550,
+    "y": 140,
+    "wires": []
+  },
+  {
+    "id": "1f7f3754.389f59",
+    "type": "link in",
+    "z": "3781abdd.207e34",
+    "name": "Element",
+    "links": [
+      "2dfabc2b.bdee04",
+      "a0530194.f477d",
+      "9122e49.3b83718",
+      "822e43c1.258ba"
+    ],
+    "x": 175,
+    "y": 120,
+    "wires": [
+      [
+        "e71264f6.099628",
+        "3a8dd5f4.265eea"
+      ]
+    ]
+  }
+]
