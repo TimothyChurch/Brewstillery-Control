@@ -7968,9 +7968,7 @@
             [
                 "62dedc44.33b984"
             ],
-            [
-                "235c4095.a9204"
-            ]
+            []
         ]
     },
     {
@@ -7985,24 +7983,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 870,
-        "y": 680,
-        "wires": []
-    },
-    {
-        "id": "235c4095.a9204",
-        "type": "debug",
-        "z": "63b32048.ef223",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
         "x": 860,
-        "y": 780,
+        "y": 760,
         "wires": []
     }
 ]
