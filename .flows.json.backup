@@ -181,13 +181,10 @@
             "921f2e4a.a31c4",
             "78d0e5b1.c1595c",
             "9de4bde1.400c5",
-<<<<<<< HEAD
-            "a391ede0.6a3b4"
+            "38241cc7.2b37b4"
         ],
         "x": 574,
-        "y": 919,
-        "w": 402,
-        "h": 162
+        "y": 599
 =======
             "38241cc7.2b37b4"
         ],
@@ -209,13 +206,10 @@
             "700c01d4.04bc",
             "30d80192.91af0e",
             "70c23f2.130d7c",
-<<<<<<< HEAD
-            "c5274252.4fd9d"
+            "5fdbb64c.1cd1c8"
         ],
-        "x": 574,
-        "y": 739,
-        "w": 402,
-        "h": 162
+        "x": 954,
+        "y": 419
 =======
             "5fdbb64c.1cd1c8"
         ],
@@ -237,13 +231,10 @@
             "f9070436.2fae68",
             "7ee9ca0.c4cac38",
             "2b27afa2.c92f9",
-<<<<<<< HEAD
-            "96b060d1.0ef02"
+            "ae3c32a0.8333d"
         ],
         "x": 574,
-        "y": 559,
-        "w": 402,
-        "h": 162
+        "y": 419
 =======
             "ae3c32a0.8333d"
         ],
@@ -267,11 +258,8 @@
             "218c0176.1c053e",
             "883e24cc.3eac08"
         ],
-<<<<<<< HEAD
-        "x": 574,
-        "y": 379,
-        "w": 402,
-        "h": 162
+        "x": 954,
+        "y": 239
 =======
         "x": 954,
         "y": 239
@@ -291,13 +279,10 @@
             "1485dad.b7f1f25",
             "ba90762.caa9b88",
             "476b4255.a8fd3c",
-<<<<<<< HEAD
-            "7a9dd43a.5f36dc"
+            "3371140d.37a4bc"
         ],
         "x": 574,
-        "y": 199,
-        "w": 402,
-        "h": 162
+        "y": 239
 =======
             "3371140d.37a4bc"
         ],
@@ -1434,6 +1419,7 @@
     },
     {
 =======
+=======
 >>>>>>> 0997f6734616c9b88bf1639a439d987626ca5c8e
         "id": "7fe4b5c3.32e58c",
         "type": "function",
@@ -1554,104 +1540,6 @@
             [
                 "a823c9cf.2a6178"
             ]
-        ]
-    },
-    {
-<<<<<<< HEAD
-        "id": "587e692b.c911c8",
-        "type": "function",
-        "z": "559ef2af.18e20c",
-        "g": "33032759.19f648",
-        "name": "Basic On-Off",
-        "func": "temp = global.get(\"dephleg.temp\");\ntarget = global.get(\"dephleg.target\");\ndelta = global.get(\"dephleg.delta\");\nvar bypass = {payload: 0}; \nvar deplag = {payload: 0};\n\nif (temp >= (target + delta)) {\n    bypass.payload = 0;\n    deplag.payload = 0;\n} else if (temp >= target) {\n    bypass.payload = 0;\n    deplag.payload = 0;\n} else if (temp < target && temp >= (target - delta)) {\n    bypass.payload = 1;\n    deplag.payload = 0;\n} else {\n    bypass.payload = 1;\n    deplag.payload = 1;\n}\n\nreturn [bypass, deplag];",
-        "outputs": 2,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 430,
-        "y": 440,
-        "wires": [
-            [
-                "4bc8f0fd.9e077"
-            ],
-            [
-                "3b72d5de.b1fdba"
-            ]
-        ],
-        "outputLabels": [
-            "Bypass",
-            "Dephleg"
-        ]
-    },
-    {
-        "id": "a669446c.c0ab18",
-        "type": "inject",
-        "z": "559ef2af.18e20c",
-        "d": true,
-        "g": "33032759.19f648",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "2",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 250,
-        "y": 440,
-        "wires": [
-            [
-                "587e692b.c911c8"
-            ]
-        ]
-    },
-    {
-        "id": "4bc8f0fd.9e077",
-        "type": "exec",
-        "z": "559ef2af.18e20c",
-        "g": "33032759.19f648",
-        "command": "4relay 0 write 4",
-        "addpay": true,
-        "append": "",
-        "useSpawn": "false",
-        "timer": "",
-        "oldrc": false,
-        "name": "Bypass valve relay",
-        "x": 650,
-        "y": 400,
-        "wires": [
-            [],
-            [],
-            []
-        ]
-    },
-    {
-        "id": "3b72d5de.b1fdba",
-        "type": "exec",
-        "z": "559ef2af.18e20c",
-        "g": "33032759.19f648",
-        "command": "4relay 0 write 3",
-        "addpay": true,
-        "append": "",
-        "useSpawn": "false",
-        "timer": "",
-        "oldrc": false,
-        "name": "Dephleg valve relay",
-        "x": 650,
-        "y": 480,
-        "wires": [
-            [],
-            [],
-            []
         ]
     },
     {
@@ -1917,14 +1805,6 @@
             "1eac1593.24174a",
             "ea35d423.eb6438"
         ],
-<<<<<<< HEAD
-        "x": 615,
-        "y": 780,
-        "wires": [
-            [
-                "d43c9182.e6735",
-                "c5274252.4fd9d"
-=======
         "x": 995,
         "y": 460,
         "wires": [
@@ -2015,9 +1895,8 @@
             "47d05fd7.62ab2",
             "c8b827a3.cbb8b8"
         ],
-<<<<<<< HEAD
-        "x": 615,
-        "y": 420,
+        "x": 995,
+        "y": 280,
 =======
         "x": 995,
         "y": 280,
@@ -2118,9 +1997,8 @@
         "from": "",
         "to": "",
         "reg": false,
-<<<<<<< HEAD
-        "x": 770,
-        "y": 1040,
+        "x": 690,
+        "y": 720,
 =======
         "x": 690,
         "y": 720,
@@ -2153,9 +2031,8 @@
         "from": "",
         "to": "",
         "reg": false,
-<<<<<<< HEAD
-        "x": 770,
-        "y": 860,
+        "x": 1070,
+        "y": 540,
 =======
         "x": 1070,
         "y": 540,
@@ -2188,9 +2065,8 @@
         "from": "",
         "to": "",
         "reg": false,
-<<<<<<< HEAD
-        "x": 770,
-        "y": 680,
+        "x": 690,
+        "y": 540,
 =======
         "x": 690,
         "y": 540,
@@ -2223,9 +2099,8 @@
         "from": "",
         "to": "",
         "reg": false,
-<<<<<<< HEAD
-        "x": 770,
-        "y": 500,
+        "x": 1070,
+        "y": 360,
 =======
         "x": 1070,
         "y": 360,
@@ -2258,9 +2133,8 @@
         "from": "",
         "to": "",
         "reg": false,
-<<<<<<< HEAD
-        "x": 750,
-        "y": 320,
+        "x": 690,
+        "y": 360,
 =======
         "x": 690,
         "y": 360,
@@ -2280,12 +2154,14 @@
         "g": "7f26e4b4.5bb80c",
         "name": "Head Vapor Temp",
         "links": [
-<<<<<<< HEAD
-            "901690f3.e2807",
-            "eaf2c852.8d9cd8"
+            "eaf2c852.8d9cd8",
+            "221dab54.566e34",
+            "22fde801.1ac468",
+            "6023f5f1.d2528c",
+            "901690f3.e2807"
         ],
-        "x": 935,
-        "y": 1040,
+        "x": 875,
+        "y": 720,
 =======
             "eaf2c852.8d9cd8",
             "221dab54.566e34",
@@ -2312,9 +2188,8 @@
             "847bb113.ba03b",
             "1e1591fa.89a4fe"
         ],
-<<<<<<< HEAD
-        "x": 935,
-        "y": 860,
+        "x": 1275,
+        "y": 540,
 =======
         "x": 1275,
         "y": 540,
@@ -2334,9 +2209,8 @@
             "a698a96d.c6ad68",
             "6b820a2b.fd2064"
         ],
-<<<<<<< HEAD
-        "x": 935,
-        "y": 680,
+        "x": 895,
+        "y": 540,
 =======
         "x": 895,
         "y": 540,
@@ -2364,8 +2238,7 @@
         "to": "",
         "reg": false,
         "x": 780,
-<<<<<<< HEAD
-        "y": 960,
+        "y": 640,
 =======
         "y": 640,
 >>>>>>> 0997f6734616c9b88bf1639a439d987626ca5c8e
@@ -2395,9 +2268,8 @@
         "from": "",
         "to": "",
         "reg": false,
-<<<<<<< HEAD
-        "x": 770,
-        "y": 780,
+        "x": 1170,
+        "y": 460,
 =======
         "x": 1170,
         "y": 460,
@@ -2428,9 +2300,8 @@
         "from": "",
         "to": "",
         "reg": false,
-<<<<<<< HEAD
-        "x": 770,
-        "y": 600,
+        "x": 790,
+        "y": 460,
 =======
         "x": 790,
         "y": 460,
@@ -2483,9 +2354,8 @@
             "ab7c2111.3b43f",
             "1362acce.d6b8e3"
         ],
-<<<<<<< HEAD
-        "x": 935,
-        "y": 500,
+        "x": 1275,
+        "y": 360,
 =======
         "x": 1275,
         "y": 360,
@@ -2503,9 +2373,8 @@
             "221dab54.566e34",
             "985d73fb.ed9bf"
         ],
-<<<<<<< HEAD
-        "x": 935,
-        "y": 320,
+        "x": 895,
+        "y": 360,
 =======
         "x": 895,
         "y": 360,
@@ -2570,9 +2439,8 @@
         "round": "1",
         "mult": "single",
         "reduce": false,
-<<<<<<< HEAD
-        "x": 860,
-        "y": 1000,
+        "x": 840,
+        "y": 680,
 =======
         "x": 840,
         "y": 680,
@@ -2613,9 +2481,8 @@
         "round": "1",
         "mult": "single",
         "reduce": false,
-<<<<<<< HEAD
-        "x": 860,
-        "y": 820,
+        "x": 1220,
+        "y": 500,
 =======
         "x": 1220,
         "y": 500,
@@ -2693,9 +2560,8 @@
         "mult": "single",
         "reduce": false,
 <<<<<<< HEAD
-        "x": 860,
-        "y": 640,
-=======
+        "y": 500,
+>>>>>>> 0997f6734616c9b88bf1639a439d987626ca5c8e
         "x": 840,
         "y": 500,
 >>>>>>> 0997f6734616c9b88bf1639a439d987626ca5c8e
@@ -2963,8 +2829,7 @@
         "type": "exec",
         "z": "4efa04f2.60a01c",
         "g": "e74cbe1a.43ea4",
-<<<<<<< HEAD
-        "command": "rtd 0 read 7",
+        "command": "rtd 0 read 4",
 =======
         "command": "rtd 0 read 4",
 >>>>>>> 0997f6734616c9b88bf1639a439d987626ca5c8e
@@ -3056,8 +2921,7 @@
         "type": "exec",
         "z": "4efa04f2.60a01c",
         "g": "e74cbe1a.43ea4",
-<<<<<<< HEAD
-        "command": "rtd 0 read 8",
+        "command": "rtd 0 read 2",
 =======
         "command": "rtd 0 read 2",
 >>>>>>> 0997f6734616c9b88bf1639a439d987626ca5c8e
@@ -3089,9 +2953,8 @@
         "start": "0",
         "inout": "in",
         "property": "payload",
-<<<<<<< HEAD
-        "x": 690,
-        "y": 460,
+        "x": 1070,
+        "y": 320,
 =======
         "x": 1070,
         "y": 320,
@@ -3114,9 +2977,8 @@
         "round": "1",
         "mult": "single",
         "reduce": false,
-<<<<<<< HEAD
-        "x": 860,
-        "y": 460,
+        "x": 1220,
+        "y": 320,
 =======
         "x": 1220,
         "y": 320,
@@ -6088,9 +5950,8 @@
         "z": "35a3c3b3.d04c4c",
         "g": "65e60811.5da678",
         "name": "Simple PID",
-<<<<<<< HEAD
-        "setpoint": "25",
-        "pb": 1,
+        "setpoint": "1",
+        "pb": "1",
 =======
         "setpoint": "1",
         "pb": "1",
@@ -8055,8 +7916,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 870,
-<<<<<<< HEAD
-        "y": 680,
+        "y": 800,
 =======
         "y": 800,
 >>>>>>> 0997f6734616c9b88bf1639a439d987626ca5c8e
@@ -8075,13 +7935,6 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 860,
-<<<<<<< HEAD
-        "y": 780,
-        "wires": []
-    },
-    {
-        "id": "79a37fe4.eed2e",
-=======
         "y": 900,
         "wires": []
     },
@@ -8257,6 +8110,9 @@
     },
     {
         "id": "1a1ab5d1.537dea",
+<<<<<<< HEAD
+>>>>>>> 0997f6734616c9b88bf1639a439d987626ca5c8e
+=======
 >>>>>>> 0997f6734616c9b88bf1639a439d987626ca5c8e
         "type": "ui_text",
         "z": "4efa04f2.60a01c",
@@ -8265,6 +8121,7 @@
         "width": 0,
         "height": 0,
         "name": "",
+<<<<<<< HEAD
 <<<<<<< HEAD
         "label": "Jacket Temp - 1",
         "format": "{{msg.payload}}",
@@ -8303,6 +8160,713 @@
         "layout": "row-spread",
         "x": 1160,
         "y": 600,
+=======
+        "label": "Charge",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 1160,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "8c8856ed.895958",
+        "type": "ui_text",
+        "z": "4efa04f2.60a01c",
+        "group": "7d6d2c09.222214",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Pot Vapor",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 1160,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "8421eca.9bdf01",
+        "type": "ui_text",
+        "z": "4efa04f2.60a01c",
+        "group": "7d6d2c09.222214",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Dephleg",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 1160,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "18d27939.181477",
+        "type": "ui_text",
+        "z": "4efa04f2.60a01c",
+        "group": "7d6d2c09.222214",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Head Vapor",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 1170,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "5bfc2c97.7c8a24",
+        "type": "ui_chart",
+        "z": "4efa04f2.60a01c",
+        "name": "",
+        "group": "7d6d2c09.222214",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "x": 1150,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "985d73fb.ed9bf",
+        "type": "link in",
+        "z": "4efa04f2.60a01c",
+        "name": "",
+        "links": [
+            "1485dad.b7f1f25"
+        ],
+        "x": 1015,
+        "y": 660,
+        "wires": [
+            [
+                "73819be1.008be4"
+            ]
+        ]
+    },
+    {
+        "id": "ab7c2111.3b43f",
+        "type": "link in",
+        "z": "4efa04f2.60a01c",
+        "name": "",
+        "links": [
+            "5a6db6cd.04e258"
+        ],
+        "x": 1015,
+        "y": 700,
+        "wires": [
+            [
+                "1a1ab5d1.537dea"
+            ]
+        ]
+    },
+    {
+        "id": "a698a96d.c6ad68",
+        "type": "link in",
+        "z": "4efa04f2.60a01c",
+        "name": "",
+        "links": [
+            "f9070436.2fae68"
+        ],
+        "x": 1015,
+        "y": 740,
+        "wires": [
+            [
+                "8c8856ed.895958"
+            ]
+        ]
+    },
+    {
+        "id": "847bb113.ba03b",
+        "type": "link in",
+        "z": "4efa04f2.60a01c",
+        "name": "",
+        "links": [
+            "700c01d4.04bc"
+        ],
+        "x": 1015,
+        "y": 780,
+        "wires": [
+            [
+                "8421eca.9bdf01"
+            ]
+        ]
+    },
+    {
+        "id": "22fde801.1ac468",
+        "type": "link in",
+        "z": "4efa04f2.60a01c",
+        "name": "",
+        "links": [
+            "921f2e4a.a31c4"
+        ],
+        "x": 1015,
+        "y": 820,
+        "wires": [
+            [
+                "18d27939.181477"
+            ]
+        ]
+    },
+    {
+        "id": "221dab54.566e34",
+        "type": "link in",
+        "z": "4efa04f2.60a01c",
+        "name": "",
+        "links": [
+            "1485dad.b7f1f25",
+            "5a6db6cd.04e258",
+            "700c01d4.04bc",
+            "921f2e4a.a31c4",
+            "f9070436.2fae68"
+        ],
+        "x": 1015,
+        "y": 860,
+        "wires": [
+            [
+                "5bfc2c97.7c8a24"
+            ]
+        ]
+    },
+    {
+        "id": "14e2554c.44335b",
+        "type": "inject",
+        "z": "4efa04f2.60a01c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 780,
+        "y": 160,
+        "wires": [
+            [
+                "53d8ee2.2dbed1"
+            ]
+        ]
+    },
+    {
+        "id": "53d8ee2.2dbed1",
+        "type": "change",
+        "z": "4efa04f2.60a01c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload + 1.5",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 970,
+        "y": 160,
+        "wires": [
+            [
+                "28d93597.e9752a"
+            ]
+        ]
+    },
+    {
+        "id": "28d93597.e9752a",
+        "type": "debug",
+        "z": "4efa04f2.60a01c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1160,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "a75300e8.bf203",
+        "type": "ui_text",
+        "z": "4efa04f2.60a01c",
+        "group": "7d6d2c09.222214",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Jacket",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 810,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "e6f2d976.fa0c98",
+        "type": "ui_text",
+        "z": "4efa04f2.60a01c",
+        "group": "7d6d2c09.222214",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Charge",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 820,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "8492f98a.e16ef8",
+        "type": "ui_text",
+        "z": "4efa04f2.60a01c",
+        "group": "7d6d2c09.222214",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Pot Vapor",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 820,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "1a5f4af1.6456e5",
+        "type": "ui_text",
+        "z": "4efa04f2.60a01c",
+        "group": "7d6d2c09.222214",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Dephleg",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 820,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "82e5c838.cd8278",
+        "type": "ui_text",
+        "z": "4efa04f2.60a01c",
+        "group": "7d6d2c09.222214",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Head Vapor",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 830,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "860a99e7.1b5268",
+        "type": "debug",
+        "z": "a2db4973.dc89c8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 950,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "5bcdddd5.467fa4",
+        "type": "debug",
+        "z": "42348d4c.8842e4",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 630,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "eda8b188.d046e",
+        "type": "ui_text_input",
+        "z": "a2db4973.dc89c8",
+        "g": "1729bed5.74f8b1",
+        "name": "",
+        "label": "Dephlegmator Target Temp",
+        "tooltip": "",
+        "group": "958ff866.e606f8",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "number",
+        "delay": "1000",
+        "topic": "",
+        "x": 720,
+        "y": 720,
+        "wires": [
+            [
+                "fca5c10f.ad27a"
+            ]
+        ]
+    },
+    {
+        "id": "587e692b.c911c8",
+        "type": "function",
+        "z": "559ef2af.18e20c",
+        "g": "33032759.19f648",
+        "name": "Basic On-Off",
+        "func": "temp = global.get(\"dephleg.temp\");\ntarget = global.get(\"dephleg.target\");\ndelta = global.get(\"dephleg.delta\");\nwave = global.get(\"dephleg.wave\");\nvar bypass\nvar valve\n\nif (temp > (target + delta)) {\n    bypass = 0;\n    valve = 0;\n    global.set(\"dephleg.wave\", \"high\");\n} else if (temp < (target - delta)) {\n    bypass = 1;\n    valve = 1;\n    global.set(\"dephleg.wave\", \"low\");\n} else if (temp > target && temp <= (target + delta)) {\n    if (wave == \"high\") {\n        bypass = 1;\n        valve = 1;\n    }\n} else if (temp < target && temp >= (target - delta)) {\n    if (wave == \"low\") {\n        bypass = 0;\n        valve = 0;\n    }\n}\n\nreturn [bypass, valve];",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 410,
+        "y": 300,
+        "wires": [
+            [
+                "4bc8f0fd.9e077",
+                "b1577354.c161d"
+            ],
+            [
+                "3b72d5de.b1fdba"
+            ]
+        ],
+        "outputLabels": [
+            "Bypass",
+            ""
+        ]
+    },
+    {
+        "id": "a669446c.c0ab18",
+        "type": "inject",
+        "z": "559ef2af.18e20c",
+        "g": "33032759.19f648",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "2",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 280,
+        "wires": [
+            [
+                "162f1101.e8227f"
+            ]
+        ]
+    },
+    {
+        "id": "4bc8f0fd.9e077",
+        "type": "exec",
+        "z": "559ef2af.18e20c",
+        "g": "33032759.19f648",
+        "command": "4relay 0 write 3",
+        "addpay": true,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "Bypass valve relay",
+        "x": 670,
+        "y": 300,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "3b72d5de.b1fdba",
+        "type": "exec",
+        "z": "559ef2af.18e20c",
+        "g": "33032759.19f648",
+        "command": "4relay 0 write 4",
+        "addpay": true,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "Dephleg valve relay",
+        "x": 670,
+        "y": 380,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "162f1101.e8227f",
+        "type": "ui_switch",
+        "z": "559ef2af.18e20c",
+        "g": "33032759.19f648",
+        "name": "",
+        "label": "Dephleg Control",
+        "tooltip": "",
+        "group": "958ff866.e606f8",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 180,
+        "y": 340,
+        "wires": [
+            [
+                "b219d7b6.df4f08"
+            ]
+        ]
+    },
+    {
+        "id": "b219d7b6.df4f08",
+        "type": "switch",
+        "z": "559ef2af.18e20c",
+        "g": "33032759.19f648",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 210,
+        "y": 400,
+        "wires": [
+            [
+                "587e692b.c911c8"
+            ],
+            [
+                "9af5b500.1ec328"
+            ]
+        ]
+    },
+    {
+        "id": "5f5bca7b.814624",
+        "type": "debug",
+        "z": "4efa04f2.60a01c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "2d23b5bc.8cb47a",
+        "type": "debug",
+        "z": "42348d4c.8842e4",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "f9673641.1b11f8",
+        "type": "change",
+        "z": "a2db4973.dc89c8",
+        "g": "1729bed5.74f8b1",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "dephleg.target",
+                "tot": "global"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "Target",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 680,
+        "y": 680,
+        "wires": [
+            [
+                "860a99e7.1b5268",
+                "d3bdb61.aa50448"
+            ]
+        ]
+    },
+    {
+        "id": "c5cbfcfc.c5dfc",
+        "type": "inject",
+        "z": "a2db4973.dc89c8",
+        "g": "1729bed5.74f8b1",
+        "name": "Time",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.5",
+        "topic": "Target",
+        "payload": "",
+        "payloadType": "date",
+        "x": 470,
+        "y": 680,
+        "wires": [
+            [
+                "f9673641.1b11f8"
+            ]
+        ]
+    },
+    {
+        "id": "9af5b500.1ec328",
+        "type": "change",
+        "z": "559ef2af.18e20c",
+        "g": "33032759.19f648",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "0",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 430,
+        "y": 420,
+        "wires": [
+            [
+                "4bc8f0fd.9e077",
+                "3b72d5de.b1fdba"
+            ]
+        ]
+    },
+    {
+        "id": "b1577354.c161d",
+        "type": "debug",
+        "z": "559ef2af.18e20c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 140,
+>>>>>>> 0997f6734616c9b88bf1639a439d987626ca5c8e
         "wires": []
     },
     {
