@@ -1,4 +1,7 @@
 [
   "jquery",
-  "socket.io"
+  "socket.io",
+  "vue",
+  "bootstrap",
+  "bootstrap-vue"
 ]
